@@ -1,23 +1,23 @@
 node {
 
-    stage('Clone repository') {
+    stage('Code Checkout') {
         /* Cloning the Repository to our Workspace */
 	    checkout scm
 	    echo "code checked in"
     }
 
-    stage('Build image') {
+    stage('Maven Build') {
         /* This builds the actual image */
 
          echo "code checked in"
     }
 
-    stage('Test image') {
+    stage(' Maven Test') {
         
           echo "code checked in"
     }
 
-    stage('Push image') {
+    stage('Push Image') {
          echo "code checked in"
     }
 }
