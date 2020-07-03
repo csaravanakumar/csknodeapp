@@ -8,8 +8,9 @@ node {
 
     stage('Maven Build') {
         /* This builds the actual image */
-
-         echo "code checked in"
+        def mavhome=tool name: 'maven-3', type: 'maven'
+        bat 'mvn package'
+        echo "package completed"
     }
 
     stage(' Maven Test') {
