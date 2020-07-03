@@ -3,9 +3,8 @@ node {
 
     stage('Clone repository') {
         /* Cloning the Repository to our Workspace */
-
-        checkout scm
-	echo "code checked in"
+        git 'https://github.com/csaravanakumar/csknodeapp.git'
+        echo "code checked in"
     }
 
     stage('Build image') {
