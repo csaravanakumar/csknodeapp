@@ -10,24 +10,15 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        app = docker.build("cskdevops/nodeapp3720")
+         echo "code checked in"
     }
 
     stage('Test image') {
         
-        app.inside {
-            echo "Tests passed"
-        }
+          echo "code checked in"
     }
 
     stage('Push image') {
-        /* 
-			You would need to first register with DockerHub before you can push images to your account
-		*/
-        docker.withRegistry('https://registry.hub.docker.com', 'csktest') {
-            app.push("${env.BUILD_NUMBER}")
-            app.push("latest")
-            } 
-                echo "Trying to Push Docker Build to DockerHub"
+         echo "code checked in"
     }
 }
