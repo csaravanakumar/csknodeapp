@@ -5,6 +5,7 @@ node {
         /* Cloning the Repository to our Workspace */
 
         checkout scm
+	bat 'docker help'
 	echo "code checked in"
     }
 
